@@ -66,6 +66,7 @@ GEM
       childprocess (~> 0.5)
       rubyzip (~> 1.0)
       websocket (~> 1.0)
+    syntax (1.2.0)
     unicode_utils (1.4.0)
     watir-webdriver (0.9.1)
       selenium-webdriver (>= 2.46.2)
@@ -89,6 +90,7 @@ DEPENDENCIES
   page-object
   rake
   rspec
+  syntax
   unicode_utils
   watir-webdriver
   watir-webdriver-performance
