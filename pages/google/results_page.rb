@@ -1,9 +1,10 @@
 class ResultsPage
   include PageObject
 
-  @results_class = 'r'
+  @@results_id = 'rcnt'
 
   def results
-    @browser.h3(class: 'r').when_present.text
+    @browser.div(id: 'rcnt').wait_until_present
+    @browser.div(id: 'rcnt').text
   end
 end

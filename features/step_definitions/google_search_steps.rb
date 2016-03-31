@@ -12,6 +12,7 @@ end
 
 Then /"([^\"]*)" is present on the results page/ do |result|
   on_page ResultsPage do |page|
-    page.results.include?(result).should == true
+    results = page.results
+    results.include?(result).should == true
   end
 end

@@ -3,4 +3,6 @@
 /junit
 /rerun.txt
 /screenshots
+/cucumber_rerun.html
+/cucumber_rerun.json
 /.idea/
