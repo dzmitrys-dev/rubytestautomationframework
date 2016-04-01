@@ -96,6 +96,3 @@ DEPENDENCIES
   unicode_utils
   watir-webdriver
   watir-webdriver-performance
-
-BUNDLED WITH
-   1.10.5
