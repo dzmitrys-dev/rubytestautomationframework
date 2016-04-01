@@ -26,7 +26,7 @@ Cucumber::Rake::Task.new(:rerun) do |task|
 end
 
 Cucumber::Rake::Task.new(:all) do |task|
-  selenium_successful = run_rake_task("all_no_rerun")
+  selenium_successful = run_rake_task("all_rerun")
   rerun_successful = true
   unless selenium_successful
     puts "\n\n Rerunning failed tests"
@@ -35,6 +35,15 @@ Cucumber::Rake::Task.new(:all) do |task|
   unless selenium_successful || rerun_successful
     fail 'Cucumber tests failed'
   end
+end
+
+Cucumber::Rake::Task.new(:all_rerun) do |task|
+  task.cucumber_opts = ["--format junit --out junit",
+                        "--format html  --out cucumber.html",
+                        "--format json  --out cucumber.json",
+                        "-f rerun --out rerun.txt",
+                        "--format pretty --color",
+                        "features"]
 end
 
 Cucumber::Rake::Task.new(:all_no_rerun) do |task|
